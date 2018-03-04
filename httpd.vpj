@@ -1,0 +1,80 @@
+[CONFIGURATIONS]
+config=,Debug
+config=,Release
+[GLOBAL]
+packtype=gnuc
+DebugCallbackName=gdb
+workingdir=.
+version=7.0
+packname=GNU C/C++ Wizard
+buildsystem=automakefile
+MACRO=\n
+makefile=Makefile
+[COMPILER.Debug]
+compile=copts: concur|capture|dialog:_gnuc_options_form:Compile|savecurrent|menu: Compile:&Compilecmd: g++ -c %xup -ansi -g -Wall -pedantic -o "%bd%n%oe" %i "%f"otheropts: outputext: .o
+link=copts: concur|capture|dialog:_gnuc_options_form:Link|savecurrent|nevershow|menu: Link:&Linkcmd: g++ %xup -g -Wall -pedantic -o "%bd%o" %f %libsotheropts: 
+make=copts: concur|capture|saveworkspacefiles|menu: Build:&Buildcmd: gmake -f "Makefile" CFG=Debugotheropts: rebuild: 1
+rebuild=copts: concur|capture|saveworkspacefiles|menu: Rebuild:&Rebuildcmd: otheropts: 
+debug=copts: concur|capture|dialog:_gnuc_options_form:Run/Debug|buildfirst|menu: Debug:&Debugcmd: vsdebugio -prog "%bd%o"otheropts: 
+execute=copts: concur|capture|dialog:_gnuc_options_form:Run/Debug|buildfirst|saveworkspacefiles|menu: Execute:E&xecutecmd: "%bd%o"otheropts: 
+usertool_dash=copts: |savenone|menu: dash:-cmd: otheropts: 
+usertool_gnu_c_options=copts: |readonly|disablecapoutput|savenone|hide|nochangedir|menu: GNU C Options:GNU C &Options...cmd: gnucoptionsotheropts: 
+includedirs=
+sysincludedirs=
+reffile=
+libs=
+outputfile=httpd
+prebuildcmds=
+postbuildcmds=
+stoponprebuilderrors=0
+stoponpostbuilderrors=0
+[COMPILER.Release]
+compile=copts: concur|capture|dialog:_gnuc_options_form:Compile|savecurrent|menu: Compile:&Compilecmd: g++ -c %xup -ansi -Wall -pedantic -o "%bd%n%oe" %i "%f"otheropts: outputext: .o
+link=copts: concur|capture|dialog:_gnuc_options_form:Link|savecurrent|nevershow|menu: Link:&Linkcmd: g++ %xup -Wall -pedantic -o "%bd%o" %f %libsotheropts: 
+make=copts: concur|capture|saveworkspacefiles|menu: Build:&Buildcmd: gmake -f "Makefile" CFG=Releaseotheropts: rebuild: 1
+rebuild=copts: concur|capture|saveworkspacefiles|menu: Rebuild:&Rebuildcmd: otheropts: 
+debug=copts: concur|capture|dialog:_gnuc_options_form:Run/Debug|buildfirst|menu: Debug:&Debugcmd: vsdebugio -prog "%bd%o"otheropts: 
+execute=copts: concur|capture|dialog:_gnuc_options_form:Run/Debug|buildfirst|saveworkspacefiles|menu: Execute:E&xecutecmd: "%bd%o"otheropts: 
+usertool_dash=copts: |savenone|menu: dash:-cmd: otheropts: 
+usertool_gnu_c_options=copts: |readonly|disablecapoutput|savenone|hide|nochangedir|menu: GNU C Options:GNU C &Options...cmd: gnucoptionsotheropts: 
+includedirs=
+sysincludedirs=
+reffile=
+libs=
+outputfile=httpd
+prebuildcmds=
+postbuildcmds=
+stoponprebuilderrors=0
+stoponpostbuilderrors=0
+[FILES]
+Makefile
+source/DDescript.cpp
+source/DDescript.h
+source/DException.cpp
+source/DException.h
+source/DFile.cpp
+source/DFile.h
+source/DFork.cpp
+source/DFork.h
+source/DHttpRequest.cpp
+source/DHttpRequest.h
+source/DList.cpp
+source/DList.h
+source/DMain.cpp
+source/DObject.cpp
+source/DObject.h
+source/DSemaphore.cpp
+source/DSemaphore.h
+source/DServerd.cpp
+source/DServerd.h
+source/DSharedMem.cpp
+source/DSharedMem.h
+source/DSignal.cpp
+source/DSignal.h
+source/DSocket.cpp
+source/DSocket.h
+source/DString.cpp
+source/DString.h
+source/Makefile
+source/headers.h
+[ASSOCIATION]
